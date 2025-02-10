@@ -1,0 +1,379 @@
+* {
+  margin-right: 8px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+#my-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.header {
+  padding: 0.625rem 2rem;
+}
+.header .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .navigation__logo {
+  font-family: "Georgia", serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.header .navigation__links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.header .navigation__link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .header .navigation__links {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .header .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header .navigation__links {
+    flex-direction: row;
+    gap: 0.625rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header .navigation {
+    gap: 0.625rem;
+  }
+}
+
+.heading {
+  padding: 4rem 2rem;
+}
+.heading__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  padding-left: 5%;
+}
+.heading__title {
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.heading__description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-top: 0.5rem;
+  line-height: 1.8;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .heading__content {
+    padding-left: 10%;
+  }
+}
+
+.about {
+  padding: 2rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .about {
+    padding: 2rem 6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about {
+    padding: 2rem 6rem;
+  }
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0rem 0rem;
+}
+@media only screen and (min-width: 1024px) {
+  .about__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title image" "text image";
+    gap: 1rem;
+    align-items: start;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about__title {
+    grid-area: title;
+  }
+}
+.about__title h2 {
+  font-family: "Georgia", serif;
+  font-size: 1.75rem;
+  margin: 0;
+}
+.about__img__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 1024px) {
+  .about__img__section {
+    grid-area: image;
+  }
+}
+.about__img {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 480px) {
+  .about__img {
+    width: 300px;
+    height: 300px;
+  }
+}
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .about__text {
+    grid-area: text;
+  }
+}
+
+/* Skills Section */
+.skills {
+  padding: 2rem;
+}
+.skills__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .skills__header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.skills__title {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+.skills__description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem;
+}
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 1rem;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.skills__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills__icon {
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .skills {
+    display: none;
+  }
+}
+
+.portfolio {
+  padding: 0.5rem;
+}
+
+.portfolio-header h2 {
+  padding-top: 5rem;
+  font-family: "Georgia", serif;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.tile {
+  background-color: #f5f3f4;
+  height: 35rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .tile {
+    width: auto;
+    max-width: 100%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    height: auto;
+  }
+}
+.tile img {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 0.5rem;
+}
+
+.tile h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: #000;
+  margin: 0px;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.tile p {
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+
+.fa-github {
+  margin-left: 220px;
+}
+
+.contact {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 4rem 2rem;
+}
+.contact .contact-heading {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+.contact .contact-button {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  transition: background-color 0.3s, border-color 0.3s;
+  text-decoration: none;
+}
+.contact .contact-button:hover {
+  background-color: green;
+  border-color: green;
+}
+
+footer .socials {
+  background-color: black;
+  padding: 2rem;
+  text-align: center;
+}
+footer .socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+footer .socials ul li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+footer .socials ul li a i {
+  margin: 0;
+}
+footer .socials ul li .cv {
+  width: 38px;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  footer .socials ul li ul li a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer .socials ul li ul li a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
