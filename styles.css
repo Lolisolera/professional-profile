@@ -31,7 +31,6 @@ body {
 .header .navigation__logo {
   font-family: "Georgia", serif;
   font-size: 1.5rem;
-  text-transform: uppercase;
   color: #000;
   text-decoration: none;
   cursor: pointer;
