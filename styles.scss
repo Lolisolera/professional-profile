@@ -6,8 +6,7 @@
 $font-primary: 'Georgia', serif;
 $font-secondary: 'Arial', sans-serif;
 $color-text: #000;
-$color-background: #fff;
-$color-highlight: #cfcfcf;
+
 
 
 * {
@@ -19,10 +18,8 @@ $color-highlight: #cfcfcf;
 body {
     font-family: $font-secondary;
     color: $color-text;
-    background-color: $color-background;
     line-height: 1.6;
     font-size: typography.$font-size-base;
-
 }
 
 //Background
@@ -224,11 +221,11 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem; // Space between title and description
+        gap: 0.5rem; 
         margin-bottom: 2.5rem;
 
         @include devices.tablet {
-            flex-direction: row; // Arrange title and description side by side
+            flex-direction: row; 
             align-items: center;
         }
     }
@@ -279,9 +276,6 @@ body {
         display: none;
     }
 }
-
-
-
 
 
 
@@ -384,14 +378,14 @@ body {
         font-size: 2rem;
         padding: 1rem 2rem;
         color: black;
-        background-color: white; // White background for the button
-        border: 2px solid black; // Black border for the button
+        background-color: white;
+        border: 2px solid black; 
         transition: background-color 0.3s, border-color 0.3s;
         text-decoration: none;
 
         &:hover {
             background-color: green;
-            border-color: green; // Change border color on hover
+            border-color: green; 
         }
     }
 }
@@ -402,7 +396,7 @@ body {
 
 footer {
     .socials {
-        background-color: black; // Black background only for the footer section with social icons
+        background-color: black; 
         padding: 2rem;
         text-align: center;
 
@@ -419,7 +413,7 @@ footer {
                     display: inline-flex;
                     justify-content: center;
                     align-items: center;
-                    background-color: black; // Circular white background
+                    background-color: black; 
                     color: white;
                     width: 4rem;
                     height: 4rem;
