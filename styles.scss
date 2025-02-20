@@ -243,7 +243,7 @@ body {
 
     &__container {
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         gap: 1rem;
 
         @include devices.tablet {
