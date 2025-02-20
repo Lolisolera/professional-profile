@@ -217,14 +217,21 @@ body {
 }
 .skills__item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .skills__icon {
   max-width: 60px;
   height: auto;
   aspect-ratio: 1/1;
   object-fit: contain;
+}
+.skills__item span {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 @media (max-width: 767px) {
   .skills {

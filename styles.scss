@@ -258,8 +258,10 @@ body {
 
     &__item {
         display: flex;
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     &__icon {
@@ -269,11 +271,18 @@ body {
         object-fit: contain;
     }
 
+    &__item span {
+        margin-top: 0.5rem; 
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
     // Mobile View: Hide skills section
     @media (max-width: 767px) {
         display: none;
     }
 }
+
 
 
 
